@@ -8,23 +8,31 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="43*"/>
-            <RowDefinition Height="46*"/>
-            <RowDefinition Height="42*"/>
-            <RowDefinition Height="39*"/>
-            <RowDefinition Height="47*"/>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="120*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="54*"/>
+            <RowDefinition Height="78*"/>
+            <RowDefinition Height="61*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="79*"/>
-            <ColumnDefinition Width="321*"/>
+            <ColumnDefinition Width="243*"/>
+            <ColumnDefinition Width="78*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Height="34" Width="158" FontSize="15"/>
-        <Button Content="Свет" Grid.Column="1" HorizontalAlignment="Left" Margin="136,86,0,0" VerticalAlignment="Top" Height="66" Grid.RowSpan="2" Width="298" FontSize="20"/>
-        <Button Content="Отопление" Grid.Column="1" HorizontalAlignment="Left" Margin="136,92,0,0" VerticalAlignment="Top" Height="66" Grid.RowSpan="2" Width="298" Grid.Row="1" FontSize="20"/>
-        <Button Content="Вода" Grid.Column="1" HorizontalAlignment="Left" Margin="136,84,0,0" VerticalAlignment="Top" Height="66" Grid.RowSpan="2" Width="298" Grid.Row="2" FontSize="20"/>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="460,10,0,0" Text="Цена: 200" TextWrapping="Wrap" VerticalAlignment="Top" Height="46" Width="139" Grid.Row="1" FontSize="20"/>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="460,92,0,0" Text="Цена: 200" TextWrapping="Wrap" VerticalAlignment="Top" Height="46" Width="139" Grid.Row="1" FontSize="20" Grid.RowSpan="2"/>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="460,84,0,0" Text="Цена: 100" TextWrapping="Wrap" VerticalAlignment="Top" Height="46" Width="139" Grid.Row="2" FontSize="20" Grid.RowSpan="2"/>
-
+        <Button Name="regButton" Content="Зарегестрировать" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Height="34" Width="146" BorderBrush="ForestGreen" Background="DarkMagenta" Foreground="White" FontWeight="Bold" FontSize="15" Grid.Column="1" Margin="0,7,0,0" Click="RegButton"/>
+        <StackPanel Grid.Column="1" Grid.Row="3" Margin="0,54,0,14" Grid.RowSpan="2">
+            <TextBox Text="Номер телефона" TextWrapping="Wrap" Width="333" Height="37" Margin="0 0 0 0" FontSize="15" Foreground="Gray"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="2" Margin="0,3,0,0">
+            <TextBox Name="textBoxStreet" Text="Улица" TextWrapping="Wrap" Width="333" Height="41" Margin="0 15 0 0" FontSize="15" Foreground="Gray"/>
+        </StackPanel>
+        <StackPanel Margin="157,33,1,2" Grid.Row="1" Grid.ColumnSpan="2">
+            <TextBox Name="textBoxIIN" Text="ИИН" TextWrapping="Wrap" Width="333" Height="46" Margin="0 30 0 0" FontSize="15" Foreground="Gray"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="3" Margin="0,2,0,14">
+            <TextBox Text="Дом" TextWrapping="Wrap" Width="333" Height="37" Margin="0 0 0 0" FontSize="15" Foreground="Gray"/>
+        </StackPanel>
+        <Button Name="signInButton" Content="Перейти к услугам" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Height="34" Width="144" BorderBrush="ForestGreen" Background="DarkMagenta" Foreground="White" FontWeight="Bold" FontSize="15" Grid.Column="1" Margin="341,7,0,0" Click="SignInButton"/>
     </Grid>
 </Window>

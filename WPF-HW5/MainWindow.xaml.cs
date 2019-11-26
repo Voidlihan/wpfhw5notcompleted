@@ -24,5 +24,23 @@ namespace WPF_HW5
         {
             InitializeComponent();
         }
+
+        private void SignInButton(object sender, RoutedEventArgs e)
+        {
+            ServiceChange serviceChange = new ServiceChange();
+            serviceChange.Show();
+        }
+
+        private void RegButton(object sender, RoutedEventArgs e)
+        {
+            User user = new User
+            {
+                
+            };
+            using(var context = new Context())
+            {
+                
+            }
+        }
     }
 }
