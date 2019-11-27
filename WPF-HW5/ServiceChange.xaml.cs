@@ -24,13 +24,23 @@ namespace WPF_HW5
 
         private void LightButton(object sender, RoutedEventArgs e)
         {
+            MainWindow mainWindow = new MainWindow();
             Service service1 = new Service() {
                 Name = "Свет"
             };
 
             using(var context = new Context())
             {
+                var user = new User()
+                {
+                    IIN = mainWindow.textBoxIIN.Text,
+                    Street = mainWindow.textBoxStreet.Text,
+                    House = mainWindow.textBoxHouse.Text,
+                    Phonenumber = mainWindow.textBoxPhonenumber.Text,
+                    ServiceId = service1
+                };
                 context.Add(service1);
+                context.Add(user);
                 context.SaveChanges();
             }
         }
@@ -44,7 +54,12 @@ namespace WPF_HW5
 
             using (var context = new Context())
             {
+                var user = new User()
+                {
+                    ServiceId = service2
+                };
                 context.Add(service2);
+                context.Add(user);
                 context.SaveChanges();
             }
         }
@@ -58,7 +73,12 @@ namespace WPF_HW5
 
             using (var context = new Context())
             {
+                var user = new User()
+                { 
+                    ServiceId = service3
+                };
                 context.Add(service3);
+                context.Add(user);
                 context.SaveChanges();
             }
         }

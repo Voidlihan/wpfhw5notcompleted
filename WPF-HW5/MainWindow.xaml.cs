@@ -24,22 +24,51 @@ namespace WPF_HW5
         {
             InitializeComponent();
         }
+        private void RegButton(object sender, RoutedEventArgs e)
+        {
+            User user = new User
+            {
+                IIN = textBoxIIN.Text,
+                Street = textBoxStreet.Text,
+                House = textBoxHouse.Text,
+                Phonenumber = textBoxPhonenumber.Text,
+            };
+            using(var context = new Context())
+            {
+                context.Add(user);
+                context.SaveChanges();
+            }
+        }
 
-        private void SignInButton(object sender, RoutedEventArgs e)
+        public bool isExist(string IIN)
+        {
+            using (var context = new Context())
+            {
+                var user = context.User.SingleOrDefault(user => user.IIN == IIN.ToLower());
+                return !(user == null);
+            }
+        }
+
+        public User SignIn(string IIN)
+        {
+            using (var context = new Context())
+            {
+                var user = context.User.SingleOrDefault(user => user.IIN == IIN.ToLower());
+                return user;
+            }
+        }
+
+        private void ToServices(object sender, RoutedEventArgs e)
         {
             ServiceChange serviceChange = new ServiceChange();
             serviceChange.Show();
         }
 
-        private void RegButton(object sender, RoutedEventArgs e)
+        private void SignInButton(object sender, RoutedEventArgs e)
         {
-            User user = new User
-            {
-                
-            };
-            using(var context = new Context())
-            {
-                
+            if (isExist(textBoxIIN.Text))
+            {       
+                servicesButton.Visibility = Visibility.Visible;
             }
         }
     }

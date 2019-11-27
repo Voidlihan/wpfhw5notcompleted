@@ -18,9 +18,9 @@
             <ColumnDefinition Width="79*"/>
             <ColumnDefinition Width="321*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Свет" Grid.Column="1" HorizontalAlignment="Left" Margin="136,86,0,0" VerticalAlignment="Top" Height="66" Grid.RowSpan="2" Width="298" FontSize="20" Click="LightButton"/>
-        <Button Content="Отопление" Grid.Column="1" HorizontalAlignment="Left" Margin="136,92,0,0" VerticalAlignment="Top" Height="66" Grid.RowSpan="2" Width="298" Grid.Row="1" FontSize="20" Click="OtoplenieButton"/>
-        <Button Content="Вода" Grid.Column="1" HorizontalAlignment="Left" Margin="136,84,0,0" VerticalAlignment="Top" Height="66" Grid.RowSpan="2" Width="298" Grid.Row="2" FontSize="20" Click="WaterButton"/>
+        <Button Name="lightButton" Content="Свет" Foreground="White" Background="DarkMagenta" Grid.Column="1" HorizontalAlignment="Left" Margin="136,86,0,0" VerticalAlignment="Top" Height="66" Grid.RowSpan="2" Width="298" FontSize="20" Click="LightButton" FontWeight="Bold"/>
+        <Button Name="otoplenieButton" Content="Отопление" Foreground="White" Background="DarkMagenta" FontWeight="Bold" Grid.Column="1" HorizontalAlignment="Left" Margin="136,92,0,0" VerticalAlignment="Top" Height="66" Grid.RowSpan="2" Width="298" Grid.Row="1" FontSize="20" Click="OtoplenieButton"/>
+        <Button Name="waterButton" Content="Вода" Foreground="White" Background="DarkMagenta" FontWeight="Bold" Grid.Column="1" HorizontalAlignment="Left" Margin="136,84,0,0" VerticalAlignment="Top" Height="66" Grid.RowSpan="2" Width="298" Grid.Row="2" FontSize="20" Click="WaterButton"/>
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="208,12,0,0" Text="Выберите услугу" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="154" FontSize="20"/>
     </Grid>
 </Window>

@@ -20,9 +20,9 @@
             <ColumnDefinition Width="243*"/>
             <ColumnDefinition Width="78*"/>
         </Grid.ColumnDefinitions>
-        <Button Name="regButton" Content="Зарегестрировать" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Height="34" Width="146" BorderBrush="ForestGreen" Background="DarkMagenta" Foreground="White" FontWeight="Bold" FontSize="15" Grid.Column="1" Margin="0,7,0,0" Click="RegButton"/>
+        <Button Name="regButton" Content="Зарегестрировать" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" Height="34" Width="146" BorderBrush="ForestGreen" Background="DarkMagenta" Foreground="White" FontWeight="Bold" FontSize="15" Grid.Column="1" Margin="76,78,0,0" Click="RegButton" Grid.RowSpan="2"/>
         <StackPanel Grid.Column="1" Grid.Row="3" Margin="0,54,0,14" Grid.RowSpan="2">
-            <TextBox Text="Номер телефона" TextWrapping="Wrap" Width="333" Height="37" Margin="0 0 0 0" FontSize="15" Foreground="Gray"/>
+            <TextBox Name="textBoxPhonenumber" Text="Номер телефона" TextWrapping="Wrap" Width="333" Height="37" Margin="0 0 0 0" FontSize="15" Foreground="Gray"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="2" Margin="0,3,0,0">
             <TextBox Name="textBoxStreet" Text="Улица" TextWrapping="Wrap" Width="333" Height="41" Margin="0 15 0 0" FontSize="15" Foreground="Gray"/>
@@ -31,8 +31,9 @@
             <TextBox Name="textBoxIIN" Text="ИИН" TextWrapping="Wrap" Width="333" Height="46" Margin="0 30 0 0" FontSize="15" Foreground="Gray"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="3" Margin="0,2,0,14">
-            <TextBox Text="Дом" TextWrapping="Wrap" Width="333" Height="37" Margin="0 0 0 0" FontSize="15" Foreground="Gray"/>
+            <TextBox Name="textBoxHouse" Text="Дом" TextWrapping="Wrap" Width="333" Height="37" Margin="0 0 0 0" FontSize="15" Foreground="Gray"/>
         </StackPanel>
-        <Button Name="signInButton" Content="Перейти к услугам" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Height="34" Width="144" BorderBrush="ForestGreen" Background="DarkMagenta" Foreground="White" FontWeight="Bold" FontSize="15" Grid.Column="1" Margin="341,7,0,0" Click="SignInButton"/>
+        <Button Name="servicesButton" Content="Перейти к услугам" HorizontalAlignment="Left" VerticalAlignment="Top" Height="34" Width="144" BorderBrush="ForestGreen" Background="DarkMagenta" Foreground="White" FontWeight="Bold" FontSize="15" Grid.Column="2" Margin="12,41,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="ToServices"/>
+        <Button Name="signInButton" Content="Войти" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" Height="34" Width="146" BorderBrush="ForestGreen" Background="DarkMagenta" Foreground="White" FontWeight="Bold" FontSize="15" Grid.Column="1" Margin="242,78,0,0" Click="SignInButton" Grid.RowSpan="2"/>
     </Grid>
 </Window>
